@@ -1,0 +1,77 @@
+# Introduction
+
+Adopting [Christophe Dervieux's Rmd instructions](https://rpubs.com/cderv/pseudocodejs) to get algorithms in to Quarto HTML documents. 
+
+## Setup: 
+
+His steps: 
+
+1. Add an HTML file to include in the `_quarto.yml`.
+1. Add a `js` code block
+
+
+```{js}
+#| echo: false
+#| label: js-include-algorithm
+window.addEventListener('load', (event) => {
+  elem = document.querySelectorAll(".algorithm")
+  elem.forEach(e => {
+    pseudocode.renderElement(e, {lineNumber: true, lineNumberPunc: ' '});
+  })
+});
+```
+
+*issue 1*: `js` block prompts me for a jupyter install: 
+
+```
+Starting python3 kernel...Traceback (most recent call last):
+  File "/Applications/quarto/share/jupyter/jupyter.py", line 21, in <module>
+    from notebook import notebook_execute, RestartKernel
+  File "/Applications/quarto/share/jupyter/notebook.py", line 16, in <module>
+    import nbformat
+ModuleNotFoundError: No module named 'nbformat'
+Python 3 installation:
+  Version: 3.8.9
+  Path: /Applications/Xcode.app/Contents/Developer/usr/bin/python3
+  Jupyter: (None)
+
+Jupyter is not available in this Python installation.
+Install with python3 -m pip install jupyter
+```
+
+It doesn't do that in another repo where I used this. 
+
+Weirdly, once I re-rendered that other repo, this one worked ¯\\_(ツ)_/¯
+
+## The algorithm code
+
+Here's an example from the post: 
+
+```{.algorithm}
+\begin{algorithm}
+\caption{The original \textsf{Relief} algorithm for ranking predictor variables in classification models with two classes.}
+\begin{algorithmic}
+\STATE Initialize the predictor scores $S_j$ to zero;
+\FOR{$i = 1\ldots m$ randomly selected training set samples ($R_i$)}
+\STATE Find the nearest miss and hit in the training set;
+\FOR{$j = 1\ldots p$ predictor variables}
+   \STATE Adjust the score for each predictor  based on the proximity of $R_j$ to the nearest miss and hit:\\
+   $S_j = S_j - diff_j(R_j, Hit)^2/m + diff_j(R_j, Miss)^2/m$;
+\ENDFOR
+\ENDFOR
+\end{algorithmic}
+\end{algorithm}
+```
+
+(nothing shows up in the HTML output)
+
+*issue 2*: (In another document) this same code renders but the LaTeX is not processed: 
+
+```{r}
+#| label: bad-algo
+#| echo: false
+#| fig-align: center
+#| out-width: 100%
+
+knitr::include_graphics("algo-output.png")
+```

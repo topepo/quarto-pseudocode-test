@@ -1,0 +1,13 @@
+project:
+  type: book
+
+format:
+  html:
+    include-in-header:
+      - includes/pseudocode.html
+book:
+  title: "quarto-pseudocode-test"
+  author: "Max Kuhn"
+  date: "2/15/2023"
+  chapters:
+    - index.qmd
