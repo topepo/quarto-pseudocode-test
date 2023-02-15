@@ -2,6 +2,9 @@
 
 Adopting [Christophe Dervieux's Rmd instructions](https://rpubs.com/cderv/pseudocodejs) to get algorithms in to Quarto HTML documents. 
 
+Using `r R.version.string`, Quarto `r system("quarto --version", intern = TRUE)`, and RStudio IDE 2023.3.0.34.
+
+
 ## Setup: 
 
 His steps: 

@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "quarto-pseudocode-test",
     "section": "",
-    "text": "1 Introduction\nAdopting Christophe Dervieux’s Rmd instructions to get algorithms in to Quarto HTML documents."
+    "text": "1 Introduction\nAdopting Christophe Dervieux’s Rmd instructions to get algorithms in to Quarto HTML documents.\nUsing R version 4.2.0 (2022-04-22), Quarto 1.3.56, and RStudio IDE 2023.3.0.34."
   },
   {
     "objectID": "index.html#setup",
