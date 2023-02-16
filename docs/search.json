@@ -11,13 +11,13 @@
     "href": "index.html#setup",
     "title": "quarto-pseudocode-test",
     "section": "1.1 Setup:",
-    "text": "1.1 Setup:\nHis steps:\n\nAdd an HTML file to include in the _quarto.yml.\nAdd a js code block\n\n\n\n\nissue 1: js block prompts me for a jupyter install:\nStarting python3 kernel...Traceback (most recent call last):\n  File \"/Applications/quarto/share/jupyter/jupyter.py\", line 21, in <module>\n    from notebook import notebook_execute, RestartKernel\n  File \"/Applications/quarto/share/jupyter/notebook.py\", line 16, in <module>\n    import nbformat\nModuleNotFoundError: No module named 'nbformat'\nPython 3 installation:\n  Version: 3.8.9\n  Path: /Applications/Xcode.app/Contents/Developer/usr/bin/python3\n  Jupyter: (None)\n\nJupyter is not available in this Python installation.\nInstall with python3 -m pip install jupyter\nIt doesn’t do that in another repo where I used this.\nWeirdly, once I re-rendered that other repo, this one worked ¯\\(ツ)/¯"
+    "text": "1.1 Setup:\nHis steps:\n\nAdd an HTML file to include in the _quarto.yml.\nAdd a js code block"
   },
   {
     "objectID": "index.html#the-algorithm-code",
     "href": "index.html#the-algorithm-code",
     "title": "quarto-pseudocode-test",
     "section": "1.2 The algorithm code",
-    "text": "1.2 The algorithm code\nHere’s an example from the post:\n\\begin{algorithm}\n\\caption{The original \\textsf{Relief} algorithm for ranking predictor variables in classification models with two classes.}\n\\begin{algorithmic}\n\\STATE Initialize the predictor scores $S_j$ to zero;\n\\FOR{$i = 1\\ldots m$ randomly selected training set samples ($R_i$)}\n\\STATE Find the nearest miss and hit in the training set;\n\\FOR{$j = 1\\ldots p$ predictor variables}\n   \\STATE Adjust the score for each predictor  based on the proximity of $R_j$ to the nearest miss and hit:\\\\\n   $S_j = S_j - diff_j(R_j, Hit)^2/m + diff_j(R_j, Miss)^2/m$;\n\\ENDFOR\n\\ENDFOR\n\\end{algorithmic}\n\\end{algorithm}\n(nothing shows up in the HTML output)\nissue 2: (In another document) this same code renders but the LaTeX is not processed:"
+    "text": "1.2 The algorithm code\nHere’s an example from the post:\n\\begin{algorithm}\n\\caption{The original \\textsf{Relief} algorithm for ranking predictor variables in classification models with two classes.}\n\\begin{algorithmic}\n\\STATE Initialize the predictor scores $S_j$ to zero;\n\\FOR{$i = 1\\ldots m$ randomly selected training set samples ($R_i$)}\n\\STATE Find the nearest miss and hit in the training set;\n\\FOR{$j = 1\\ldots p$ predictor variables}\n   \\STATE Adjust the score for each predictor  based on the proximity of $R_j$ to the nearest miss and hit:\\\\\n   $S_j = S_j - diff_j(R_j, Hit)^2/m + diff_j(R_j, Miss)^2/m$;\n\\ENDFOR\n\\ENDFOR\n\\end{algorithmic}\n\\end{algorithm}\nissue: nothing shows up in the HTML output\nissue: (In another document) this same code renders but the LaTeX is not processed:"
   }
 ]

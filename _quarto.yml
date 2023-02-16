@@ -4,8 +4,12 @@ project:
 
 format:
   html:
+    embed-resources: true
+    engine: knitr
     include-in-header:
       - includes/pseudocode.html
+
+
 book:
   title: "quarto-pseudocode-test"
   author: "Max Kuhn"
